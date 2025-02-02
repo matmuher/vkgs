@@ -1,3 +1,9 @@
+# fork note:
+
+Original repo is: https://github.com/jaesung-cs/vkgs
+Current top of branch uses 2 queus: one for dealing with .ply file transfer and one for drawing splats.
+My laptop has the only queue so I reverted commits and returned to one-queue solution.
+
 # pygs
 Gaussian Splatting
 
@@ -6,7 +12,7 @@ Gaussian Splatting
 ```bash
 $ git submodule update --init --recursive
 ```
-
+,,,
 - conda
 ```bash
 $ conda create -n pygs python=3.10
