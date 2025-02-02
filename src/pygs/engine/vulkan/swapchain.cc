@@ -25,10 +25,13 @@ class Swapchain::Impl {
     VkSwapchainCreateInfoKHR swapchain_info = {
         VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR};
     swapchain_info.surface = surface_;
-    swapchain_info.minImageCount = 3;
+    swapchain_info.minImageCount = 4;
     swapchain_info.imageFormat = format_;
     swapchain_info.imageColorSpace = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR;
     swapchain_info.imageExtent = surface_capabilities.currentExtent;
+    swapchain_info.imageExtent.width = 1600;
+    swapchain_info.imageExtent.height = 900;
+
     swapchain_info.imageArrayLayers = 1;
     swapchain_info.imageUsage = usage_;
     swapchain_info.preTransform = surface_capabilities.currentTransform;
@@ -126,7 +129,7 @@ class Swapchain::Impl {
     VkSwapchainCreateInfoKHR swapchain_info = {
         VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR};
     swapchain_info.surface = surface_;
-    swapchain_info.minImageCount = 3;
+    swapchain_info.minImageCount = 4;
     swapchain_info.imageFormat = format_;
     swapchain_info.imageColorSpace = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR;
     swapchain_info.imageExtent = surface_capabilities.currentExtent;

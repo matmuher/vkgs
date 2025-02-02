@@ -673,7 +673,7 @@ class Engine::Impl {
     init_info.DescriptorPool = context_.descriptor_pool();
     init_info.RenderPass = render_pass_;
     init_info.Subpass = 0;
-    init_info.MinImageCount = 3;
+    init_info.MinImageCount = 4;
     init_info.ImageCount = swapchain_.image_count();
     init_info.MSAASamples = VK_SAMPLE_COUNT_4_BIT;
     init_info.Allocator = VK_NULL_HANDLE;
